@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Custtomer Details</h2>
+         
+  <table class="table table-bordered table-fixed">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Date Of Birth</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+        <div *ngFor="let badge of badges">
+         
+        <my-card [id]="badge.id" [firstName]="badge.firstName" [lastName]="badge.lastName" [email]="badge.email" [mobile]="badge.mobile" [dateOfBirth]="badge.dateOfBirth" ></my-card>
+        
+     
+      </div>
+    
+    </tbody>
+    
+  <hr/>
+  </table>
+  <hr/>
+    <div class="row">
+      <add-course></add-course>
+  </div>
+  <hr/>
+    <div class="row">
+      <delete-course></delete-course>
+  </div>
+</div>
+
+</body>
+</html>
